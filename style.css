@@ -6,10 +6,22 @@ body {
   font-size: larger;
 }
 
+
+/* Sidebar of the Dashboard */
 .sidebar {
   grid-area: 1 / 1 / 3 / 1;
   padding-left: 30px;
-  background-color: steelblue;
+  background-color: lightcyan;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 20px;
 }
 
 .sidebar > ul {
@@ -17,15 +29,38 @@ body {
   padding: 0%;
 }
 
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-block: 10px;
+}
+
+li:hover,
+.btn:hover,
+.user-actions *:hover,
+.user-info *:hover,
+.large-profile:hover {
+  cursor: pointer;
+}
+
+
+
+/* Header */
 .header {
   padding-inline: 25px;
   display: grid;
-  grid-template-columns: 3fr 1.5fr;
+  grid-template-columns: 3fr 1fr;
   align-items: center;
 }
 
 input[type='search']{
   width: 75%;
+  border-radius: 10px;
+  border: 0.5px solid lightslategray;
+  padding-inline: 10px;
+
+  outline-color: --;
 }
 
 .user-info, .user {
@@ -33,21 +68,53 @@ input[type='search']{
   align-items: center;
 }
 
+.search-bar {
+  display: flex;
+  gap: 15px;
+}
+
 .user-actions, .user-info {
   display: flex;
   justify-content: center;
-  padding-right: 20px;
-  gap: 1rem;
+  gap: 25px;
 }
 
+.small-profile {
+  width: 50px;
+  border-radius: 100%;
+}
+
+.large-profile {
+  width: 100px;
+  border-radius: 100%;
+}
+
+.user p,
+h2 {
+  margin: 0%;
+  padding-left: 25px;
+}
+
+
+
+/* Main content */
+.title-section {
+  padding-left: 10px;
+  font-size: larger;
+  font-style: italic;
+}
 
 .main {
   display: grid;
   grid-template-columns: 3fr 1fr;  
-  gap: 15px;
+  gap: 25px;
   padding: 20px;
+
+  background-color: lightcyan;
 }
 
+
+/* Projects Section */
 .main-projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -61,36 +128,58 @@ input[type='search']{
 
   min-height: calc(100vh / 5);
   padding-inline: 20px;
-  background-color: thistle;
+  border-radius: 5px;
+  background-color: lightcoral;
 }
 
 .btn {
   text-align: end;
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
 
-button {
+.main svg {
+  padding-inline: 5px;
+}
+
+
+/* Announcements Section */
+.announcements {
+  background-color: lightblue;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 50px;
+}
+
+.announcements p {
   margin: 5px;
 }
 
-.trending > p,
-.announcements > p,
-.main-projects > p {
-  padding: 0;
+.message {
+  padding-block: 5px;
+}
+
+.message > h4 {
   margin: 0;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+
+/* Trending Section */
+.trending {
+  background-color: lightblue;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .user-trend {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   align-items: center;
-  gap: 15px;
-  padding-block: 10px;
+  padding-block: 5px;
 }
 
-.name > p {
+.user-trend * {
   margin: 0%;
-  padding: 0%;
-}
-
-.user-trend.first {
-  padding-top: 20px;
 }
