@@ -5,118 +5,113 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
   <title>Admin Dashboard</title>
 </head>
 <body>
   <div class="sidebar">
-    <h1>Dashboard</h1>
+    <h1><img src="./SVG's/dashboard.svg" alt="dashboard"> Dashboard</h1>
     <ul>
-      <li>Home</li>
-      <li>Profile</li>
-      <li>Messages</li>
-      <li>History</li>
-      <li>Tasks</li>
-      <li>Communities</li>
+      <li><img src="./Images/home.png" alt="home">Home</li>
+      <li><img src="./Images/profile.png" alt="profile">Profile</li>
+      <li><img src="./Images/messages.png" alt="messages"> Messages</li>
+      <li><img src="./Images/history.png" alt="history"> History</li>
+      <li><img src="./Images/tasks.png" alt="tasks"> Tasks</li>
+      <li><img src="./Images/community.png" alt="community"> Communities</li>
     </ul>
     <ul>
-      <li>Settings</li>
-      <li>Support</li>
-      <li>Privacy</li>
+      <li><img src="./Images/settings.png" alt="settings"> Settings</li>
+      <li><img src="./Images/support.png" alt="support"> Support</li>
+      <li><img src="./Images/privacy.png" alt="privacy"> Privacy</li>
     </ul>
   </div>
+  
   <div class="header">
     <div class="search-bar">
-      <img src="" alt="sp">
+      <img src="./SVG's/search.svg" alt="">
       <input type="search" name="search" id="search">
     </div>
     <div class="user-info">
-      <img src="" alt="pf">
-      <img src="" alt="pf">
-      <h4>Morgan Oakley</h4>
+      <img src="./Images/notification.png" alt="" style="width: 40px;">
+      <img src="./Images/main-profile.jpg" alt="pf" class="small-profile">
+      <p>Morgan Oakley</p>
     </div>
     <div class="user">
-      <img src="" alt="pf">
+      <img src="./Images/main-profile.jpg" alt="pf" class="large-profile">
       <div class="name">
-        <p>Hi there</p>
+        <p>Hi there,</p>
         <h2>Morgan Oakley (@morgan)</h2>
       </div>
     </div>
     <div class="user-actions">
-      <button>New</button>
-      <button>Upload</button>
-      <button>Share</button>
+      <img src="./SVG's/new.svg" alt="new" style="padding-right: 5px;">
+      <img src="./SVG's/upload.svg" alt="upload">
+      <img src="./SVG's/share.svg" alt="share">
     </div>
   </div>
 
   <div class="main">
     <div>
-      <p>Your Projects</p>
+      <p class="title-section">Your Projects</p>
       <div class="main-projects">
         <div class="project">
           <h3>Super Cool Project</h3>
           <p>Sed tempus ut lacus ut scelerisque.Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
           <div class="btn">
-            <button>star</button><button>look</button><button>share</button>
           </div>
         </div>
         <div class="project">
           <h3>Less cool project</h3>
           <p>Sed tempus ut lacus ut scelerisque.Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
           <div class="btn">
-            <button>star</button><button>look</button><button>share</button>
           </div>
         </div>
         <div class="project">
           <h3>Impossible App</h3>
           <p>Sed tempus ut lacus ut scelerisque.Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
           <div class="btn">
-            <button>star</button><button>look</button><button>share</button>
           </div>
         </div>
         <div class="project">
           <h3>Easy Peasy App</h3>
           <p>Sed tempus ut lacus ut scelerisque.Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
           <div class="btn">
-            <button>star</button><button>look</button><button>share</button>
           </div>
         </div>
         <div class="project">
           <h3>Ad Blocker</h3>
           <p>Sed tempus ut lacus ut scelerisque.Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
           <div class="btn">
-            <button>star</button><button>look</button><button>share</button>
           </div>
         </div>
         <div class="project">
           <h3>Money Maker</h3>
           <p>Sed tempus ut lacus ut scelerisque.Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
           <div class="btn">
-            <button>star</button><button>look</button><button>share</button>
           </div>
         </div>
       </div>
     </div>
 
     <div class="main-side">
+      <p class="title-section">Announcements</p>
       <div class="announcements">
-        <p>Announcements</p>
-        <div>
-          Site Maintenance
+        <div class="message first">
+          <h4>Maintenance</h4>
           <p>Vestibulum condimentum tells lacus, in accumsan elit maximus ac. Donec hendrerit sodales congue...</p>
         </div>
-        <div>
-          Community Share Day
+        <div class="message second">
+          <h4>Community Share Day</h4>
           <p>Nam vel lectus tincidunt, rutrum nulla eu, ornare libero. Aliquam dictum accumsan porttitor...</p>
         </div>
-        <div>
-          Update Privacy Policy
+        <div class="message">
+          <h4>Update Privacy Policy</h4>
           <p>Phasellus efficitur nisi get elit consectetur, eget condimentum ante auctor. Cras fringilla sagittis sem in mattis...</p>
         </div>
       </div>
 
+      <p class="title-section">Trending</p>
       <div class="trending">
-        <p>Trending</p>
         <div class="user-trend first">
           <img src="" alt="pt">
           <div class="name">
