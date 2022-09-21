@@ -1,85 +1,86 @@
+@font-face {
+  font-family: roboto;
+  src: url(./robotoflex/RobotoFlex[GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght].ttf);
+}
+
 body {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  margin: 0%;
+  grid-template-columns: .5fr 3fr;
+  margin: 0;
   font-size: larger;
+  font-family: roboto, sans-serif, Arial, Helvetica, sans-serif;
 }
-
 
 /* Sidebar of the Dashboard */
 .sidebar {
-  grid-area: 1 / 1 / 3 / 1;
-  padding-left: 30px;
-  background-color: lightcyan;
+  grid-row: 1 / 3;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  padding-inline: 20px;
+
+  background-image: url(./Images/sidewall.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-h1 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-right: 20px;
-}
 
-.sidebar > ul {
+ul {
   list-style: none;
-  padding: 0%;
+  padding: 0;
+  font-size: 30px;
 }
 
-.sidebar li {
+li, h1 {
   display: flex;
   align-items: center;
-  gap: 10px;
   padding-block: 10px;
+  gap: 10px;
 }
-
-li:hover,
-.btn:hover,
-.user-actions *:hover,
-.user-info *:hover,
-.large-profile:hover {
-  cursor: pointer;
-}
-
 
 
 /* Header */
 .header {
-  padding-inline: 25px;
   display: grid;
   grid-template-columns: 3fr 1fr;
   align-items: center;
+  padding: 20px;
+  box-shadow: 10px 10px 10px black;
 }
 
 input[type='search']{
-  width: 75%;
-  border-radius: 10px;
-  border: 0.5px solid lightslategray;
-  padding-inline: 10px;
+  width: 85%;
+  height: 45px;
+  border: none;
+  border-radius: 30px;
+  padding-inline: 20px;
 
-  outline-color: --;
+  outline-color: #FAD02C;
+  background-color: #e0e4eceb;
 }
 
-.user-info, .user {
+.user-info, .user, .search-bar {
   display: flex;
   align-items: center;
-}
-
-.search-bar {
-  display: flex;
   gap: 15px;
 }
 
 .user-actions, .user-info {
   display: flex;
-  justify-content: center;
-  gap: 25px;
+  margin-left: auto;
+  gap: 1.5rem;
 }
 
-.small-profile {
+.user-actions * {
+  padding-inline: 20px;
+  padding-block: 5px;
+  background-color: #FAD02C;
+  border-radius: 20px;
+}
+
+.small-profile,
+.user-trend > img {
   width: 50px;
   border-radius: 100%;
 }
@@ -87,12 +88,12 @@ input[type='search']{
 .large-profile {
   width: 100px;
   border-radius: 100%;
+  padding-block: 20px;
 }
 
 .user p,
 h2 {
   margin: 0%;
-  padding-left: 25px;
 }
 
 
@@ -100,25 +101,27 @@ h2 {
 /* Main content */
 .title-section {
   padding-left: 10px;
-  font-size: larger;
-  font-style: italic;
+  font-size: 25px;
+  color: #22262A;
 }
 
 .main {
   display: grid;
   grid-template-columns: 3fr 1fr;  
-  gap: 25px;
-  padding: 20px;
+  gap: 20px;
+  padding-inline: 20px;
+  padding-bottom: 50px;
 
-  background-color: lightcyan;
+  background-color: #e0e4eceb;
+  color: aliceblue;
 }
 
 
 /* Projects Section */
 .main-projects {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
 }
 
 .project {
@@ -128,58 +131,64 @@ h2 {
 
   min-height: calc(100vh / 5);
   padding-inline: 20px;
-  border-radius: 5px;
-  background-color: lightcoral;
-}
+  border-radius: 15px;
+  border-left: 15px solid #FAD02C;
+  box-shadow: 5px 5px 5px grey;
 
-.btn {
-  text-align: end;
-  padding-top: 15px;
-  padding-bottom: 5px;
+  background-color: #22262A;
 }
 
 .main svg {
-  padding-inline: 5px;
+  padding-inline: 10px;
+  margin-inline: 5px;
+  margin-block: 10px;
+  border-radius: 10px;
+  background-color: aliceblue;
 }
 
+.btn {
+  margin-left: auto;
+}
 
 /* Announcements Section */
 .announcements {
-  background-color: lightblue;
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 15px;
+  padding-inline: 35px;
+  padding-block: 30px;
   margin-bottom: 50px;
+  box-shadow: 5px 5px 5px grey;
+  background-color: #22262A;
 }
 
-.announcements p {
-  margin: 5px;
-}
-
-.message {
+.message > div {
   padding-block: 5px;
+  font-size: 1rem;
 }
 
-.message > h4 {
-  margin: 0;
-  margin-top: 5px;
-  margin-left: 5px;
+.br {
+  border-bottom: .5px solid;
 }
 
 
 /* Trending Section */
 .trending {
-  background-color: lightblue;
+  background-color: #22262A;
   border-radius: 10px;
-  padding: 10px;
+  padding: 15px;
 }
 
 .user-trend {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  font-size: 1rem;
+  display: flex;
   align-items: center;
-  padding-block: 5px;
+  padding: 15px;
+  gap: 10px;
 }
 
-.user-trend * {
-  margin: 0%;
+li:hover,
+.btn:hover,
+.user-actions *:hover,
+.user-info *:hover,
+.large-profile:hover {
+  cursor: pointer;
 }
